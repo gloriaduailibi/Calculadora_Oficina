@@ -35,3 +35,10 @@ def dividir(a: Number, b: Number) -> float:
     if b == 0:
         raise ValueError("Divisão por zero não é permitida.")
     return float(a / b)
+
+def potencia(a: Number, b: Number) -> float:
+    """Retorna o resultado de a elevando a b"""
+    _validate_inputs(a, b)
+    if a == 0 and b == 0:
+        raise ValueError("Zero elevado a zero não é permitido.")
+    return float(a**b)

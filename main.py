@@ -25,6 +25,7 @@ while True:
         print("2 - Subtrair")
         print("3 - Multiplicar")
         print("4 - Dividir")
+        print("5 - Potência")
 
         escolha = input("Escolha a operação: ")
 
@@ -33,21 +34,29 @@ while True:
 
         if escolha == "1":
             resultado = calc_basico.somar(a, b)
+            operador = "+"
 
         elif escolha == "2":
             resultado = calc_basico.subtrair(a, b)
+            operador = "-"
 
         elif escolha == "3":
             resultado = calc_basico.multiplicar(a, b)
+            operador = "*"
 
         elif escolha == "4":
             resultado = calc_basico.dividir(a, b)
+            operador = "/"
+
+        elif escolha == "5":
+            resultado = calc_basico.potencia(a, b)
+            operador = "^"
 
         else:
             print("Opção inválida.")
             continue
 
-        print("Resultado:", resultado)
+        print(f"Resultado: {a} {operador} {b} = {resultado}")
 
     # ---------------- SAIR ----------------
     elif opcao == "0":
